@@ -33,7 +33,6 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; justify-content: space-between; align-items: center;
@@ -62,11 +61,9 @@
   }
   .nav-links a:hover { color: var(--accent); }
 
-  /* LAYOUT */
   .container { max-width: 1080px; margin: 0 auto; padding: 0 clamp(1.5rem, 5vw, 4rem); }
   section { padding: var(--gap) 0; }
 
-  /* HERO */
   #hero {
     min-height: 100svh;
     display: grid;
@@ -75,7 +72,6 @@
     gap: 4rem;
     padding-top: 80px;
   }
-  .hero-text {}
   .hero-tag {
     display: inline-flex; align-items: center; gap: 0.5rem;
     background: var(--accent-light);
@@ -104,10 +100,7 @@
     color: var(--ink);
     margin-bottom: 0.5rem;
   }
-  h1 em {
-    font-style: italic;
-    color: var(--accent);
-  }
+  h1 em { font-style: italic; color: var(--accent); }
   .hero-subtitle {
     font-size: 0.9rem;
     color: var(--ink-muted);
@@ -123,9 +116,7 @@
     max-width: 480px;
     margin-bottom: 2.5rem;
   }
-  .hero-cta {
-    display: flex; gap: 1rem; flex-wrap: wrap;
-  }
+  .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
   .btn {
     display: inline-block;
     padding: 0.7rem 1.75rem;
@@ -137,6 +128,7 @@
     border-radius: 2px;
     transition: all 0.2s;
     font-family: 'DM Sans', sans-serif;
+    cursor: pointer;
   }
   .btn-primary {
     background: var(--ink);
@@ -151,11 +143,7 @@
   }
   .btn-outline:hover { border-color: var(--ink); }
 
-  .hero-visual {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  .hero-visual { display: flex; justify-content: center; align-items: center; }
   .hero-card {
     background: var(--paper-warm);
     border: 1px solid var(--rule);
@@ -203,7 +191,6 @@
     letter-spacing: 0.05em;
   }
 
-  /* SECTION HEADERS */
   .section-label {
     font-size: 0.7rem;
     letter-spacing: 0.18em;
@@ -230,7 +217,6 @@
   }
   h2 em { font-style: italic; color: var(--accent); }
 
-  /* ABOUT */
   #about { background: var(--paper-warm); }
   .about-grid {
     display: grid;
@@ -244,7 +230,6 @@
     font-size: 0.95rem;
   }
 
-  /* EDUCATION */
   .edu-item {
     padding: 2rem 0;
     border-bottom: 1px solid var(--rule);
@@ -282,7 +267,6 @@
     letter-spacing: 0.04em;
   }
 
-  /* SKILLS */
   #skills { background: var(--paper-warm); }
   .skills-grid {
     display: grid;
@@ -320,7 +304,6 @@
     line-height: 1.6;
   }
 
-  /* EXPERIENCE */
   .exp-list { display: flex; flex-direction: column; gap: 0; }
   .exp-item {
     display: grid;
@@ -367,7 +350,6 @@
   .exp-desc ul { padding-left: 1.1rem; }
   .exp-desc li { margin-bottom: 0.3rem; }
 
-  /* PROJECTS */
   #projects { background: var(--paper-warm); }
   .projects-grid {
     display: grid;
@@ -418,7 +400,6 @@
   }
   .project-link:hover { gap: 0.7rem; }
 
-  /* CONTACT */
   #contact {
     background: var(--ink);
     color: var(--paper);
@@ -474,6 +455,11 @@
     line-height: 1.7;
     margin-bottom: 1.5rem;
   }
+  .contact-buttons {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
   #contact .btn-primary {
     background: var(--paper);
     color: var(--ink);
@@ -482,9 +468,18 @@
   #contact .btn-primary:hover {
     background: var(--accent-light);
     border-color: var(--accent-light);
+    color: var(--accent);
+  }
+  #contact .btn-wa {
+    background: #25D366;
+    color: #fff;
+    border: 1px solid #25D366;
+  }
+  #contact .btn-wa:hover {
+    background: #1da851;
+    border-color: #1da851;
   }
 
-  /* FOOTER */
   footer {
     background: #111;
     padding: 1.5rem clamp(1.5rem, 5vw, 4rem);
@@ -497,10 +492,8 @@
     letter-spacing: 0.05em;
   }
 
-  /* DIVIDER */
   .rule { height: 1px; background: var(--rule); }
 
-  /* ANIMATIONS */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(18px); }
     to { opacity: 1; transform: translateY(0); }
@@ -511,7 +504,6 @@
   .delay-3 { animation-delay: 0.35s; }
   .delay-4 { animation-delay: 0.5s; }
 
-  /* RESPONSIVE */
   @media (max-width: 768px) {
     #hero { grid-template-columns: 1fr; min-height: auto; padding-top: 100px; padding-bottom: 3rem; }
     .hero-visual { display: none; }
@@ -536,7 +528,6 @@
   </ul>
 </nav>
 
-<!-- HERO -->
 <section id="hero">
   <div class="container" style="display:contents">
     <div class="hero-text" style="padding-left: clamp(1.5rem, 5vw, 4rem);">
@@ -569,7 +560,6 @@
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
   <div class="container">
     <div class="section-label">Tentang Saya</div>
@@ -578,15 +568,9 @@
         <h2>Teknologi &<br><em>Dampak Nyata</em></h2>
       </div>
       <div class="about-text">
-        <p>
-          Halo! Saya Shanaya Balghis Riyona — mahasiswi Universitas Tazkia yang antusias mengeksplorasi titik temu antara teknologi dan kolaborasi manusia.
-        </p>
-        <p>
-          Saya memadukan fondasi teknis yang kuat di bidang infrastruktur IT dan jaringan dengan pengalaman manajerial sebagai koordinator proyek. Bagi saya, teknologi bukan hanya soal sistem yang berjalan lancar, tetapi juga tentang bagaimana kita memimpin tim secara efektif dan memberikan kontribusi nyata bagi masyarakat.
-        </p>
-        <p>
-          Melalui berbagai pengalaman kepanitiaan dan aksi sosial, saya terbiasa bekerja secara fleksibel, metodis, dan berorientasi pada ketepatan solusi.
-        </p>
+        <p>Halo! Saya Shanaya Balghis Riyona — mahasiswi Universitas Tazkia yang antusias mengeksplorasi titik temu antara teknologi dan kolaborasi manusia.</p>
+        <p>Saya memadukan fondasi teknis yang kuat di bidang infrastruktur IT dan jaringan dengan pengalaman manajerial sebagai koordinator proyek. Bagi saya, teknologi bukan hanya soal sistem yang berjalan lancar, tetapi juga tentang bagaimana kita memimpin tim secara efektif dan memberikan kontribusi nyata bagi masyarakat.</p>
+        <p>Melalui berbagai pengalaman kepanitiaan dan aksi sosial, saya terbiasa bekerja secara fleksibel, metodis, dan berorientasi pada ketepatan solusi.</p>
       </div>
     </div>
 
@@ -612,7 +596,6 @@
   </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
   <div class="container">
     <div class="section-label">Keahlian</div>
@@ -642,12 +625,10 @@
   </div>
 </section>
 
-<!-- EXPERIENCE -->
 <section id="experience">
   <div class="container">
     <div class="section-label">Pengalaman</div>
     <h2>Perjalanan <em>Profesional</em></h2>
-
     <div class="exp-list">
 
       <div class="exp-item">
@@ -740,7 +721,6 @@
   </div>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects">
   <div class="container">
     <div class="section-label">Proyek Unggulan</div>
@@ -750,54 +730,42 @@
       <div class="project-card">
         <div class="project-cat">IT · Web Development</div>
         <div class="project-title">Sistem Informasi PIK-R</div>
-        <div class="project-desc">
-          Sistem informasi berbasis web dikembangkan secara kolaboratif menggunakan SDLC penuh — dari analisis kebutuhan, perancangan flowchart, pengembangan antarmuka, hingga implementasi dan demo. Kode dikelola via GitHub.
-        </div>
+        <div class="project-desc">Sistem informasi berbasis web dikembangkan secara kolaboratif menggunakan SDLC penuh — dari analisis kebutuhan, perancangan flowchart, pengembangan antarmuka, hingga implementasi dan demo. Kode dikelola via GitHub.</div>
         <a href="https://github.com/shanayabrr/PIK-R" target="_blank" class="project-link">Lihat di GitHub →</a>
       </div>
 
       <div class="project-card">
         <div class="project-cat">IT · Cybersecurity</div>
         <div class="project-title">Eksplorasi Keamanan Siber</div>
-        <div class="project-desc">
-          Pembelajaran intensif via TryHackMe pada jalur Jr Penetration Tester & Web Fundamentals — mencakup penetration testing, keamanan jaringan, vulnerability assessment, dan keamanan aplikasi web (HTTP, DNS, autentikasi).
-        </div>
+        <div class="project-desc">Pembelajaran intensif via TryHackMe pada jalur Jr Penetration Tester & Web Fundamentals — mencakup penetration testing, keamanan jaringan, vulnerability assessment, dan keamanan aplikasi web (HTTP, DNS, autentikasi).</div>
         <a href="https://tryhackme.com" target="_blank" class="project-link">TryHackMe Platform →</a>
       </div>
 
       <div class="project-card">
         <div class="project-cat">IT · Networking</div>
         <div class="project-title">UKK — Network Administration</div>
-        <div class="project-desc">
-          Lulus predikat Kompeten pada Uji Kompetensi Keahlian TKJ: perancangan jaringan LAN/WAN/WLAN, konfigurasi router & switch, DHCP, subnetting, firewall, hotspot RADIUS, dan dokumentasi teknis jaringan lengkap.
-        </div>
+        <div class="project-desc">Lulus predikat Kompeten pada Uji Kompetensi Keahlian TKJ: perancangan jaringan LAN/WAN/WLAN, konfigurasi router & switch, DHCP, subnetting, firewall, hotspot RADIUS, dan dokumentasi teknis jaringan lengkap.</div>
         <span class="project-link" style="color: var(--ink-muted); cursor: default;">SMKN 3 Bogor · Feb 2024</span>
       </div>
 
       <div class="project-card">
         <div class="project-cat">Social Entrepreneurship</div>
         <div class="project-title">Allaxe Store</div>
-        <div class="project-desc">
-          Kewirausahaan sosial di bawah beasiswa Baitulmaal Tazkia — 100% net profit dialokasikan untuk program kemanusiaan Bela Palestine. Mengembangkan kemampuan branding, pemasaran digital, dan pengelolaan media sosial.
-        </div>
+        <div class="project-desc">Kewirausahaan sosial di bawah beasiswa Baitulmaal Tazkia — 100% net profit dialokasikan untuk program kemanusiaan Bela Palestine. Mengembangkan kemampuan branding, pemasaran digital, dan pengelolaan media sosial.</div>
         <a href="https://instagram.com/allaxe_official_" target="_blank" class="project-link">@allaxe_official_ →</a>
       </div>
 
       <div class="project-card">
         <div class="project-cat">Bisnis Kuliner</div>
         <div class="project-title">Chix Co.</div>
-        <div class="project-desc">
-          Bisnis kuliner lokal dibangun sejak masa SMK sebagai bagian implementasi PKK — eksplorasi brand dari nol, operasional, strategi pemasaran digital, dan identitas brand di media sosial.
-        </div>
+        <div class="project-desc">Bisnis kuliner lokal dibangun sejak masa SMK sebagai bagian implementasi PKK — eksplorasi brand dari nol, operasional, strategi pemasaran digital, dan identitas brand di media sosial.</div>
         <a href="https://instagram.com/chix.x_co" target="_blank" class="project-link">@chix.x_co →</a>
       </div>
 
       <div class="project-card">
         <div class="project-cat">Sosial</div>
         <div class="project-title">Tazkia Mengajar</div>
-        <div class="project-desc">
-          Relawan pengabdian masyarakat bersama Baitulmaal Tazkia — mendampingi proses pembelajaran, koordinasi kegiatan lapangan, dan membangun komunikasi efektif dalam lingkungan kolaboratif berbasis pelayanan.
-        </div>
+        <div class="project-desc">Relawan pengabdian masyarakat bersama Baitulmaal Tazkia — mendampingi proses pembelajaran, koordinasi kegiatan lapangan, dan membangun komunikasi efektif dalam lingkungan kolaboratif berbasis pelayanan.</div>
         <a href="https://instagram.com/tazkia.mengajar_" target="_blank" class="project-link">@tazkia.mengajar_ →</a>
       </div>
 
@@ -805,7 +773,6 @@
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <div class="container">
     <div class="section-label">Kontak</div>
@@ -816,9 +783,13 @@
           Terbuka untuk kolaborasi proyek, diskusi teknologi, atau peluang yang bermakna. Jangan ragu menghubungi saya.
         </p>
         <div class="contact-links">
-          <a href="mailto:shnyablqsr@gmail.com" class="contact-link">
+          <a href="https://mail.google.com/mail/?view=cm&to=shnyablqsr@gmail.com" target="_blank" class="contact-link">
             <span class="contact-link-icon">✉</span>
             shnyablqsr@gmail.com
+          </a>
+          <a href="https://wa.me/6287730740517" target="_blank" class="contact-link">
+            <span class="contact-link-icon">💬</span>
+            +62 877-3074-0517
           </a>
           <a href="https://instagram.com/shanayabrr" target="_blank" class="contact-link">
             <span class="contact-link-icon">📷</span>
@@ -835,10 +806,10 @@
         <p>
           Saat ini aktif kuliah di STMIK Tazkia dan terbuka untuk proyek freelance, kolaborasi riset, atau opportunity yang relevan dengan bidang IT, manajemen, maupun kewirausahaan sosial.
         </p>
-        <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
-  <a href="https://wa.me/6287730740517" target="_blank" class="btn btn-primary">💬 WhatsApp</a>
-  <a href="mailto:shnyablqsr@gmail.com" class="btn btn-primary">✉ Email</a>
-</div>
+        <div class="contact-buttons">
+          <a href="https://wa.me/6287730740517" target="_blank" class="btn btn-wa">💬 WhatsApp</a>
+          <a href="https://mail.google.com/mail/?view=cm&to=shnyablqsr@gmail.com" target="_blank" class="btn btn-primary">✉ Email</a>
+        </div>
       </div>
     </div>
   </div>
@@ -850,7 +821,6 @@
 </footer>
 
 <script>
-  // Intersection Observer for scroll animations
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
